@@ -16,7 +16,7 @@ class clubActivities_get(generics.GenericAPIView):
                 a = clubActivitiesModels.objects.filter(id=id)
             else:
                 a = clubActivitiesModels.objects.all()
-            b = clubActivitiesSerializers(a, many=True) 
+            b = getclubActivitiesSerializers(a, many=True)
             if a:
 
                 return Response({

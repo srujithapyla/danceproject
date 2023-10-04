@@ -20,7 +20,7 @@ class coach_Update(generics.GenericAPIView):
             return Response({
                 "Message" : "Successfull",
                 "Status" : 200,
-                "Result" : coachSerializers(data).data
+                "Result" : getcoachSerializers(data).data
             })
         
         except Exception as e:

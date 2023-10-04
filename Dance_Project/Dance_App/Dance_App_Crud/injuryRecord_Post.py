@@ -20,7 +20,7 @@ class injuryRecord(generics.GenericAPIView):
             return Response({
                 "Message" : "Successfull",
                 "Status" : 200,
-                "Result" : injuryRecordSerializers(data).data
+                "Result" : getinjuryRecordSerializers(data).data
             })
 
 

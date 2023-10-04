@@ -20,7 +20,7 @@ class attendanceRecord_Update(generics.GenericAPIView):
             return Response({
                 "Message" : "Successfull",
                 "Status" : 200,
-                "Result" : attendanceRecordSerializers(data).data
+                "Result" : getattendanceRecordSerializers(data).data
             })
         
         except Exception as e:

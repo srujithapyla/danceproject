@@ -20,7 +20,7 @@ class clubActivities_Update(generics.GenericAPIView):
             return Response({
                 "Message" : "Successfull",
                 "Status" : 200,
-                "Result" : clubActivitiesSerializers(data).data
+                "Result" : getclubActivitiesSerializers(data).data
             })
         
         except Exception as e:

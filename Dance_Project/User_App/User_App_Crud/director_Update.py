@@ -20,7 +20,7 @@ class director_Update(generics.GenericAPIView):
             return Response({
                 "Message" : "Successfull",
                 "Status" : 200,
-                "Result" : directorSerializers(data).data
+                "Result" : getdirectorSerializers(data).data
             })
         
         except Exception as e:

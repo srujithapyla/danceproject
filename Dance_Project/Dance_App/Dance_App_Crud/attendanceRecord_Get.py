@@ -16,7 +16,7 @@ class attendanceRecord_get(generics.GenericAPIView):
                 a = attendanceRecordModels.objects.filter(id=id)
             else:
                 a = attendanceRecordModels.objects.all()
-            b = attendanceRecordSerializers(a, many=True)  
+            b = getattendanceRecordSerializers(a, many=True)
             if a:
                 return Response({
                     "Message" : "Successfull",

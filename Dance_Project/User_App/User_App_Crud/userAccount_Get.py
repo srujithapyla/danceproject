@@ -16,7 +16,7 @@ class userAccount_get(generics.GenericAPIView):
                 a = userAccountModels.objects.filter(id=id)
             else:
                 a = userAccountModels.objects.all()
-            b = userAccountSerializers(a, many=True)  
+            b = GetuserAccountSerializers(a, many=True)
             if a:
                 return Response({
                     "Message" : "Successfull",

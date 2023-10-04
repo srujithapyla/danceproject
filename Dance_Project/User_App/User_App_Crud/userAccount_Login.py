@@ -26,11 +26,11 @@ class Login(generics.GenericAPIView):
         password = request.data.get('password')
         if username.endswith('.com'):
             a = userAccountModels.objects.get(email=username)
-            if password == a.password:
+            if check_password(password, a.password):
                 return Response({
                 "Message" : "Successfull",
                 "Status" : 200,
-                "Result" : LoginSerializers(a).data
+                "Result" : GetuserAccountSerializers(a).data
 
             })
             else:
@@ -43,8 +43,7 @@ class Login(generics.GenericAPIView):
 
         elif userAccountModels.objects.get(username=username):
             a=userAccountModels.objects.get(username=username)
-            if password == a.password:
-             
+            if check_password(password, a.password):
              return Response({
                 "Message" : "Successfull",
                 "Status" : 200,

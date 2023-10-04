@@ -16,7 +16,7 @@ class injuryRecord_get(generics.GenericAPIView):
                 b = injuryRecordModels.objects.filter(id=id)
             else:
                 b = injuryRecordModels.objects.all()
-            s = injuryRecordSerializers(b, many=True)  
+            s = getinjuryRecordSerializers(b, many=True)
             if b:
                 return Response({
                     "Message" : "Successfull",

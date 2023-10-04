@@ -19,7 +19,7 @@ class userAccount(generics.GenericAPIView):
             return Response({
                 "Message" : "Successfull",
                 "Status" : 200,
-                "Response" : userAccountSerializers(k).data
+                "Response" : GetuserAccountSerializers(k).data
 
             })
         

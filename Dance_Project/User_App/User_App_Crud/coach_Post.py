@@ -20,7 +20,7 @@ class coach(generics.GenericAPIView):
             return Response({
                 "Message" : "Successfull",
                 "Status" : 200,
-                "Result" : coachSerializers(data).data
+                "Result" : getcoachSerializers(data).data
             })
 
 

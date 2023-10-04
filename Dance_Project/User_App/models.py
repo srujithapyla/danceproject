@@ -1,11 +1,15 @@
 from django.db import models
-
+from django.apps import apps
 
 ## userAccount
 class userAccountModels(models.Model):
     username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
     email = models.EmailField()
+    name = models.CharField(max_length=100)
+    age = models.IntegerField()
+    personalinfo = models.CharField(max_length=200)
+    role=models.CharField(max_length=200)
     objects = models.Manager()
 
     class Meta:
@@ -28,6 +32,8 @@ class directorModels(models.Model):
     director_contactInfo = models.CharField(max_length=100)
     userId = models.ForeignKey(userAccountModels, max_length=250, related_name='director',
                                    on_delete=models.CASCADE, default=True)
+    role = models.CharField(max_length=200)
+
     objects = models.Manager()
 
 
@@ -41,6 +47,7 @@ class coachModels(models.Model):
     coach_contactInfo = models.CharField(max_length=100)
     userId = models.ForeignKey(userAccountModels, max_length=250, related_name='coach',
                                    on_delete=models.CASCADE, default=True)
+    role = models.CharField(max_length=200)
     objects = models.Manager()
 
 

@@ -13,14 +13,6 @@ urlpatterns = [
     path("ageGroup_get/<int:id>",ageGroup_get.as_view()),
     path("ageGroup_update/<int:id>",ageGroup_Update.as_view()),
 
-    ## artist
-
-    path("artist/", artist.as_view()),
-    path("artist_get/",artist_get.as_view()),
-    path("artist_get/<int:id>",artist_get.as_view()),
-    path("artist_update/<int:id>",artist_Update.as_view()),
-
-
     ## performance
 
     path("performance/", performance.as_view()),

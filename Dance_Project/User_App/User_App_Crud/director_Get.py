@@ -16,7 +16,7 @@ class director_get(generics.GenericAPIView):
                 a = directorModels.objects.filter(id=id)
             else:
                 a = directorModels.objects.all()
-            b = directorSerializers(a, many=True)  
+            b = getdirectorSerializers(a, many=True)
             if a:
                 return Response({
                     "Message" : "Successfull",

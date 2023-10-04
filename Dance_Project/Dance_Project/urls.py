@@ -52,7 +52,7 @@ token = token()
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="react",
+        title="Dance_Project",
         default_version='v1.0.0-staging',
         name='openapi-schema',
     ),

@@ -16,7 +16,7 @@ class performance_get(generics.GenericAPIView):
                 a = performanceModels.objects.filter(id=id)
             else:
                 a = performanceModels.objects.all()
-            b = performanceSerializers(a, many=True)
+            b = getperformanceSerializers(a, many=True)
 
             if a:
                 return Response({

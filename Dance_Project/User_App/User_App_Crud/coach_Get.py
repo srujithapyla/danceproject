@@ -16,7 +16,7 @@ class coach_get(generics.GenericAPIView):
                 a = coachModels.objects.filter(id=id)
             else:
                 a = coachModels.objects.all()
-            b = coachSerializers(a, many=True)  
+            b = getcoachSerializers(a, many=True)
             if a:
                 return Response({
                     "Message" : "Successfull",

@@ -3,10 +3,7 @@ from .Dance_App_Crud.ageGroup_Post import ageGroup
 from .Dance_App_Crud.ageGroup_Get import ageGroup_get
 from .Dance_App_Crud.ageGroup_Update import ageGroup_Update
 
-## artist
-from .Dance_App_Crud.artist_Post import artist
-from .Dance_App_Crud.artist_Get import artist_get
-from .Dance_App_Crud.artist_Update import artist_Update
+
 
 ## performance
 from .Dance_App_Crud.performance_Post import performance
@@ -43,11 +40,6 @@ ageGroup()
 ageGroup_get()
 ageGroup_Update()
 
-## artist
-
-artist()
-artist_get()
-artist_Update()
 
 
 ## performance

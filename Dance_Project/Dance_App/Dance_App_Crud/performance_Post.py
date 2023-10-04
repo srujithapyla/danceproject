@@ -20,7 +20,7 @@ class performance(generics.GenericAPIView):
             return Response({
                 "Message" : "Successfull",
                 "Status" : 200,
-                "Result" : performanceSerializers(data).data
+                "Result" : getperformanceSerializers(data).data
             })
 
 
