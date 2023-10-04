@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from rest_framework.permissions import IsAuthenticated
+
 from ..serializers import *
 from rest_framework import generics
 from rest_framework.response import Response
@@ -10,6 +12,7 @@ from ..models import *
 
 class userAccount(generics.GenericAPIView):
     serializer_class = userAccountSerializers
+    permission_classes = (IsAuthenticated,)
 
     def post(self,request):
         try:

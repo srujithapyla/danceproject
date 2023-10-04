@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from rest_framework.permissions import IsAuthenticated
+
 from ..models import *
 from ..Serializers import *
 from rest_framework.response import Response
@@ -8,6 +10,7 @@ from rest_framework import generics
 
 class attendanceRecord_get(generics.GenericAPIView):
     serializer_class = attendanceRecordSerializers
+    permission_classes = (IsAuthenticated,)
 
     def get(self,request,id=None):
 

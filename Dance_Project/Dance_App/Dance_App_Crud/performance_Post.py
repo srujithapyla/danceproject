@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from rest_framework.permissions import IsAuthenticated
+
 from ..models import *
 from ..Serializers import *
 from rest_framework.response import Response
@@ -9,6 +11,7 @@ from rest_framework import generics
 
 class performance(generics.GenericAPIView):
     serializer_class = performanceSerializers
+    permission_classes = (IsAuthenticated,)
 
     def post(self,request):
 

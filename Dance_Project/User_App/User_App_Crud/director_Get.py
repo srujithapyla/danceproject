@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from rest_framework.permissions import IsAuthenticated
+
 from ..models import *
 from ..serializers import *
 from rest_framework.response import Response
@@ -8,6 +10,7 @@ from rest_framework import generics
 
 class director_get(generics.GenericAPIView):
     serializer_class = directorSerializers
+    permission_classes = (IsAuthenticated,)
 
     def get(self,request,id=None):
 

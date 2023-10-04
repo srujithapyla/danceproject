@@ -3,12 +3,14 @@ from ..models import *
 from ..Serializers import *
 from rest_framework.response import Response
 from rest_framework import generics
+from rest_framework.permissions import IsAuthenticated
 
 
 
 
 class ageGroup(generics.GenericAPIView):
     serializer_class = ageGroupSerializers
+    permission_classes = (IsAuthenticated,)
 
     def post(self,request):
 

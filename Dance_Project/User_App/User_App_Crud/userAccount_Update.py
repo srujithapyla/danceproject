@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from rest_framework.permissions import IsAuthenticated
+
 from ..models import *
 from ..serializers import *
 from rest_framework.response import Response
@@ -7,6 +9,7 @@ from django.contrib.auth.hashers import make_password
 
 class userAccount_Update(generics.GenericAPIView):
     serializer_class = updateuserAccountSerializers
+    permission_classes = (IsAuthenticated,)
 
     def put(self, request, id):
         try:

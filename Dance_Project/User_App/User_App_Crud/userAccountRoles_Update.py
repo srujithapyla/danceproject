@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from rest_framework.permissions import IsAuthenticated
+
 from ..models import *
 from ..serializers import *
 from rest_framework.response import Response
@@ -8,6 +10,7 @@ from rest_framework import generics
 
 class userAccountRoles_Update(generics.GenericAPIView):
     serializer_class = userAccountRolesSerializers
+    permission_classes = (IsAuthenticated,)
 
     def put(self,request,id):
 
